@@ -1,12 +1,11 @@
-p=""
-l=[]
-while (p!=":"):
-    p = input("Introdueixi una paraula: ")
-    if p!=":" and p[0]=="A":
-        l.append(p)
-    if len(l)==4:
-        p="."
-print("Les paraules que comencen per A son: {}".format(l))
+p = ""
+l = []
+while p != ".":
+    p = input("Introdueixi una frase: ")
+    if p != ".":
+        s = p.title()
+        l.append(s)
+print("Les frases introduïdes són: {}".format(l))
 print("Ja hem acabat!")
 
 
