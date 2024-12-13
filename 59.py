@@ -6,7 +6,7 @@ def es_primer(n):
 # Llista de números de l'1 al 100
 numeros = range(1, 101)
 
-# Filtrar nombres primers usant la funció `filter` i una funció lambda
+
 primers = list(filter(es_primer, numeros))
 
 # Imprimir els resultats
