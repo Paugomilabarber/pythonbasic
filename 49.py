@@ -1,10 +1,12 @@
-def crear_llista_fitxer(fl):
-    llista = []
-    paraula = open(fl, "r")
-    for line in paraula:
-        for word in line.split():
-            llista.append(word.strip())
-    paraula.close()
-    return llista
 
-print(crear_llista_fitxer("words.txt"))
+
+import random
+
+def llista_20():
+    l=[]
+    for i in range(20):
+        l.append(random.randint(1,100))
+    return l
+
+l=llista_20()
+print(l)
