@@ -1,21 +1,21 @@
-def index_paraula(llista, paraula):
-    if paraula in llista:
-        return llista.index(paraula)
-    else:
+def llegir_llista():
+    l = []
+    a="a"
+    while a!=".":
+        a=input("Introduexi una llista de paraules: ")
+        if a!=".":
+            l.append((a))
+    return l
+
+def index_paraula(l, paraula):
+    if paraula not in l:
         return -1
+    else:
+        for i,e in enumerate(l):
+            if e==paraula:
+                return i
 
-# Programa principal
-llista_input = input("Introdueix una llista de paraules separades per espais: ")
-llista = llista_input.split()
-llista.sort()
-
-paraula = input("Introdueix la paraula que vols cercar: ")
-
-# Cercar l'índex de la paraula
-index = index_paraula(llista, paraula)
-
-# Mostrar el resultat
-if index != -1:
-    print("L'índex de la paraula '{}' és: {}".format(paraula, index))
-else:
-    print("La paraula '{}' no es troba a la llista.".format(paraula))
+#Programa principal
+l=llegir_llista()
+p=input("Dir que vols cercar: ")
+n=index_paraula
