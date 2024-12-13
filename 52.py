@@ -14,7 +14,7 @@ paraula = input("Introdueix la paraula que vols cercar: ")
 # Cercar l'índex de la paraula
 index = index_paraula(llista, paraula)
 
-# Mostrar el resultat amb format
+# Mostrar el resultat
 if index != -1:
     print("L'índex de la paraula '{}' és: {}".format(paraula, index))
 else:
