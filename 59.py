@@ -1,14 +1,18 @@
-def es_primer(n):
-    if n <= 1:
-        return False
-    return all(n % i != 0 for i in range(2, int(n**0.5) + 1))
+"""
+for i in range(1,101):
+    if i%2!=0:
 
-# Llista de números de l'1 al 100
-numeros = range(1, 101)
+print(i)
+"""
+def primers(max):
+    print(1)
+    for i in range(2, max+1):
+        primer = True
+        for j in range(2,i):
+            if (i%j == 0):
+                primer = False
 
-
-primers = list(filter(es_primer, numeros))
-
-# Imprimir els resultats
-print("Els números primers entre 1 i 100 són: {}".format(primers))
-print("Hi ha un total de {} números primers entre 1 i 100.".format(len(primers)))
+        if primer:
+            print(i)      
+    
+primers(100)
